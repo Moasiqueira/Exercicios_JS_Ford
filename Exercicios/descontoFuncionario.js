@@ -17,3 +17,10 @@
 // = se for cliente não haverá desconto
 // = se for funcionário terá 10% de desconto
 // = se for vip terá 5% de desconto
+
+const cliente1 = 5.00;
+const funcionário2 = 10.00;
+const vip3 = 5.00;
+
+const compra = 700.00
+
