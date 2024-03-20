@@ -26,3 +26,34 @@
 
 //saida de dados
 // = mostrar a porcentagem de desconto se for alcool ou se for gasolina
+
+let tipoCombustivel = prompt("Qual tipo de combustivel (A - alcool, G - Gasolina):").toUpperCase();
+let quantidadeLitros = parseFloat(prompt("Digite a quantidade de litros vendidos:"))
+
+let valorAPagar;
+
+switch(tipoCombustivel){
+    case A:
+        if (quantidadeLitros <= 20){
+            valorAPagar = quantidadeLitros *(precoAlcool - (precoAlcool * 0.03));
+        }
+        else{
+            valorAPagar = quantidadeLitros * (precoAlcool - (precoAlcool * 0.05));
+        }
+        
+    break;
+    
+    case G:
+        if(quantidadeLitros <= 20){
+            valorAPagar = quantidadeLitros (precoGasolina *(precoGasolina * 0.04))}
+        else{
+            valorAPagar = quantidadeLitros *(precoGasolina * (precoGasolina * 0.06))
+        }
+            break;
+            default: ("Tipo de combustivel invalido")
+        }
+
+
+
+
+

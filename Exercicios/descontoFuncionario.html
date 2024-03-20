@@ -1,0 +1,65 @@
+<!-- // Uma loja fornece 10% de desconto para funcionários e 5% de desconto para clientes vips. 
+// Faça um programa que calcule o valor total a ser pago por uma pessoa. O programa deverá ler o
+// valor total da compra efetuada e um código que identifique se o comprador é um cliente comum (1), funcionário (2) ou vip (3).
+
+
+
+
+
+//entrada de dados
+// = determinar se o cliente é 1- cliente, 2- funcionário e 3-vip
+// = informar o total da compra 
+
+//processamento de dados
+// = usar a estrutura switch case para determinar se é cliente, funcionário ou vip
+
+//saída de dados
+// = se for cliente não haverá desconto
+// = se for funcionário terá 10% de desconto
+// = se for vip terá 5% de desconto -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto Funcionario</title>
+</head>
+<body>
+    
+<script>
+
+    const codigoCliente = parseInt(prompt("Digite o codigo do cliente( 1 - cliente; 2 - funcionário; 3 - vip)"));
+
+    const totalCompra = parseFloat(prompt("Digite o valor da compra"));
+
+    let totalComDesconto;
+
+    switch (codigoCliente) {
+        case 1: 
+          alert("Você é um cliente, infelizmente não possui descontos");
+        break;
+
+        case 2:
+            totalComDesconto = totalCompra * 0.1;
+        alert (
+            `Recebeu 10% de desconto em sua compra, tendo um total de descontode: ${totalComDesconto}.
+         O total da sua compra é de $ ${totalCompra - totalComDesconto} reais`);
+        break;
+
+        case 3:
+             totalComDesconto = totalCompra * 0.05;
+            alert(`Recebeu 5% de desconto em sua compra, tendo um total de desconto de:$ ${totalComDesconto} reais.
+             O total de sua compra é de: $${totalCompra - totalComDesconto} reais.`);
+        break;
+
+        default:
+             alert ("codigo inválido")
+             break;
+    }
+
+
+</script>
+
+</body>
+</html>
